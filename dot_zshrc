@@ -3,14 +3,12 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/Applications/GoLand.app/Contents/MacOS:$PATH"
-
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="crunch"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,10 +70,9 @@ ZSH_THEME="crunch"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting z extract web-search)
+plugins=(git z extract)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.kube/switch_kube.sh
 
 # User configuration
 
@@ -83,10 +80,6 @@ source $HOME/.kube/switch_kube.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-#export GOROOT="/opt/homebrew/Cellar/go/1.23.4/libexec"
-export GOPATH="/Users/gleaming/go"
-export PATH="/Users/gleaming/go/bin:$PATH"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -98,27 +91,32 @@ export PATH="/Users/gleaming/go/bin:$PATH"
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sshbaidu="ssh root@10.50.0.34"
-alias sshi="ssh root@10.50.12.11"
-alias sshtencent="ssh root@10.31.16.157"
-alias sshtest="ssh root@10.50.0.85"
-alias sshinfra="ssh root@10.50.0.2"
-alias sshmac="ssh aurora@192.168.0.105"
-alias sshhegui="ssh root@106.12.178.206"
-alias sshlantu="ssh root@10.199.16.51"
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh
 
-alias dot='chezmoi'
-alias dotpush='chezmoi re-add && git -C ~/.local/share/chezmoi add -A && git -C ~/.local/share/chezmoi commit -m "update" && git -C ~/.local/share/chezmoi push'
+# ==================== autosuggestions 优化 ====================
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+# ==================== 命令补全 ====================
+source <(kubectl completion zsh)
+source <(docker completion zsh)
+source <(argo completion zsh)
+
+# ==================== PATH ====================
+export PATH="$HOME/.local/bin:$PATH"
+
+# ==================== 自定义 alias ====================
+alias sshdev="ssh root@139.196.49.19"
+alias sshgo="ssh root@10.169.128.46"
+alias pull="bash ~/scripts/pull.sh"
+alias sw="kubecm switch"
+alias R="expect ~/ssh.exp"
+alias kx="kubectx"
+alias ku="kubectl"
+alias kproxy='bash ~/gitlab/hpc/.claude/skills/k8s-proxy-tunnel/kproxy.sh'
+alias cge-stop='ps aux | grep CGE | grep -v grep | awk '\''{print $2}'\'' | xargs sudo kill -STOP'
+
+# ==================== Starship Prompt ====================
 eval "$(starship init zsh)"

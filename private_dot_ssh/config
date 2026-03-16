@@ -3,12 +3,9 @@
 # This won't be added again if you remove it.
 Include ~/.orbstack/ssh/config
 
-Host 10.50.0.50
-  HostName 10.50.0.50
-  Port 32309
-  User root
 
-Host 1.117.135.36
-  HostkeyAlgorithms +ssh-rsa
-  PubkeyAcceptedAlgorithms +ssh-rsa
-  SetEnv LC_ALL=en_US.UTF-8
+Host *
+    ServerAliveInterval 15
+    ServerAliveCountMax 6
+    TCPKeepAlive yes
+    IPQoS lowdelay throughput

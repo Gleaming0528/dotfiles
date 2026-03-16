@@ -1,4 +1,4 @@
 syntax on
 set t_Co=256
 set background=dark   " 或 light，视你 iTerm2 的主题而定
-
+set rtp+=/opt/homebrew/opt/fzf
