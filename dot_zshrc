@@ -118,4 +118,6 @@ alias sshmac="ssh aurora@192.168.0.105"
 alias sshhegui="ssh root@106.12.178.206"
 alias sshlantu="ssh root@10.199.16.51"
 
+alias dotpush='chezmoi re-add && git -C ~/.local/share/chezmoi add -A && git -C ~/.local/share/chezmoi commit -m "update" && git -C ~/.local/share/chezmoi push'
+
 eval "$(starship init zsh)"

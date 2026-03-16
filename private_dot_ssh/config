@@ -3,10 +3,6 @@
 # This won't be added again if you remove it.
 Include ~/.orbstack/ssh/config
 
-Host *
-    ServerAliveInterval 60
-    ServerAliveCountMax 3
-
 Host 10.50.0.50
   HostName 10.50.0.50
   Port 32309
