@@ -1,0 +1,107 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+
+# ==================== Prompt 格式 ====================
+# 第一行：目录 + git + 语言/工具 + K8s + 耗时
+# 第二行：时间 + 输入光标
+format = """
+$directory\
+$git_branch\
+$git_status\
+$golang\
+$nodejs\
+$python\
+$conda\
+$docker_context\
+$kubernetes\
+$cmd_duration\
+$line_break\
+$time$character"""
+
+# 时间放右侧，和左侧信息对称
+right_format = ""
+
+# ==================== 目录 ====================
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+# ==================== Git 分支 ====================
+[git_branch]
+format = "on [$symbol$branch]($style) "
+style = "bold purple"
+
+# ==================== Git 状态 ====================
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold red"
+
+# ==================== 隐藏版本号 ====================
+[golang]
+format = 'lsp [$symbol]($style)'
+
+[nodejs]
+format = 'lsp [$symbol]($style)'
+
+[python]
+format = 'lsp [$symbol($virtualenv)]($style) '
+detect_extensions = ['.py']
+detect_files = ['requirements.txt', 'pyproject.toml', 'setup.py', 'Pipfile', '__init__.py']
+detect_folders = []
+
+[rust]
+format = 'lsp [$symbol]($style)'
+
+[java]
+format = 'lsp [$symbol]($style)'
+
+[helm]
+format = 'lsp [$symbol]($style)'
+
+# ==================== Conda 环境 ====================
+[conda]
+format = '[$symbol$environment]($style) '
+style = "bold green"
+ignore_base = false
+
+# ==================== Docker ====================
+[docker_context]
+format = "co [$symbol$context]($style) "
+only_with_files = true
+
+# ==================== Kubernetes ====================
+[kubernetes]
+disabled = false
+format = '[⎈ $context( \($namespace\))]($style) '
+style = "bold #87afff"
+
+# ==================== 命令耗时 ====================
+[cmd_duration]
+min_time = 3_000
+format = "took [$duration]($style) "
+style = "bold yellow"
+
+# ==================== 时间（crunch 风格：白色括号 + 黄色时间） ====================
+[time]
+disabled = false
+format = '[{](white)[$time](yellow)[}](white)'
+time_format = "%H:%M"
+
+# ==================== 输入符号（crunch 风格：白色箭头） ====================
+[character]
+success_symbol = "[ ➭](white)"
+error_symbol = "[ ➭](bold red)"
+
+# ==================== 关掉不需要的模块 ====================
+[package]
+disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true

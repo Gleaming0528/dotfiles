@@ -1,0 +1,77 @@
+# ==================== 字体配置 ====================
+font-family = Maple Mono NF
+font-size = 18
+font-thicken = true
+
+# ==================== 配色方案（从 iTerm2 Dark 模式迁移）====================
+background = #000000
+foreground = #cccccc
+
+# 选区颜色
+selection-background = #b5d5ff
+selection-foreground = #000000
+
+# ANSI 基础色（0-7）— 直接从 iTerm2 颜色面板取值
+palette = 0=#000000
+palette = 1=#cc0000
+palette = 2=#4e9a05
+palette = 3=#c4a000
+palette = 4=#3464a4
+palette = 5=#74507a
+palette = 6=#05989a
+palette = 7=#d3d7cf
+
+# ANSI 高亮色（8-15）— 直接从 iTerm2 颜色面板取值
+palette = 8=#545753
+palette = 9=#ef2828
+palette = 10=#8ae234
+palette = 11=#fce94e
+palette = 12=#719ecf
+palette = 13=#ad7ea7
+palette = 14=#34e2e2
+palette = 15=#ededec
+
+# 粗体文字为纯白（与 iTerm2 Dark 模式一致），彩色粗体用高亮色
+bold-color = #ffffff
+
+# ==================== 光标配置 ====================
+cursor-color = #cccccc
+cursor-text = #000000
+cursor-style = block
+cursor-style-blink = false
+
+# ==================== 窗口配置 ====================
+window-theme = dark
+macos-titlebar-style = tabs
+window-decoration = auto
+window-padding-x = 6
+window-padding-y = 6
+window-padding-balance = true
+background-opacity = 1
+window-inherit-working-directory = false
+
+# ==================== 选择与复制 ====================
+# 选中即复制到系统剪贴板（对应 iTerm2 的 "Copy to pasteboard on selection"）
+copy-on-select = clipboard
+
+# ==================== 滚动配置 ====================
+scrollback-limit = 10000000
+mouse-scroll-multiplier = 3
+
+# ==================== Shell 集成 ====================
+shell-integration = detect
+shell-integration-features = no-cursor,no-sudo
+
+# ==================== 终端类型 ====================
+term = xterm-256color
+
+# ==================== macOS 按键配置 ====================
+macos-option-as-alt = true
+
+# ==================== 分屏快捷键 ====================
+keybind = super+d=new_split:right
+keybind = super+shift+d=new_split:down
+
+# ==================== 铃声配置 ====================
+# iTerm2 启用了视觉铃声，这里用 border 闪烁替代
+bell-features = border,no-system,no-audio
