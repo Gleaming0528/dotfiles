@@ -25,7 +25,7 @@ right_format = ""
 [directory]
 truncation_length = 3
 truncate_to_repo = true
-style = "bold cyan"
+style = "bold #5fafff"
 
 # ==================== Git 分支 ====================
 [git_branch]
