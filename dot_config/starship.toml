@@ -1,5 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
-add_newline = true
+add_newline = false
 
 # ==================== Prompt 格式 ====================
 # 第一行：目录 + git + 语言/工具 + K8s + 耗时
