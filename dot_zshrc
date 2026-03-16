@@ -70,7 +70,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z extract)
+plugins=(sudo git z extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,8 @@ alias kx="kubectx"
 alias ku="kubectl"
 alias kproxy='bash ~/gitlab/hpc/.claude/skills/k8s-proxy-tunnel/kproxy.sh'
 alias cge-stop='ps aux | grep CGE | grep -v grep | awk '\''{print $2}'\'' | xargs sudo kill -STOP'
+alias dot='chezmoi'
+alias dotpush='chezmoi re-add && git -C ~/.local/share/chezmoi add -A && git -C ~/.local/share/chezmoi commit -m "update" && git -C ~/.local/share/chezmoi push'
 
 # ==================== Starship Prompt ====================
 eval "$(starship init zsh)"
