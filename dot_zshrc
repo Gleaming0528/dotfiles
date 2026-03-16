@@ -95,6 +95,9 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh
 
+# ==================== fzf 快捷键集成（Ctrl+R 历史搜索 / Ctrl+T 文件搜索 / Alt+C 目录跳转）====================
+source <(fzf --zsh)
+
 # ==================== autosuggestions 优化 ====================
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
