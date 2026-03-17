@@ -68,9 +68,11 @@ term = xterm-256color
 # ==================== macOS 按键配置 ====================
 macos-option-as-alt = true
 
-# ==================== 分屏快捷键 ====================
+# ==================== 分屏与清屏快捷键 ====================
 keybind = super+d=new_split:right
 keybind = super+shift+d=new_split:down
+# Cmd+R 清屏（与 iTerm2 一致，发送 Ctrl+L，保留 scrollback）
+keybind = cmd+r=text:\x0c
 
 # ==================== 铃声配置 ====================
 # iTerm2 启用了视觉铃声，这里用 border 闪烁替代
