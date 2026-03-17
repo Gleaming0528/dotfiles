@@ -1,0 +1,15 @@
+{
+    "window.commandCenter": true,
+    "editor.fontSize": 15,
+    "terminal.integrated.fontSize": 16,
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onFocusChange",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Atom One Light",
+    "editor.fontFamily": "Maple Mono,Menlo, Monaco, 'Courier New', monospace",
+    "go.diagnostic.vulncheck": "Off",
+    "remote.downloadExtensionsLocally": true,
+    "explorer.confirmPasteNative": false,
+    "go.toolsManagement.autoUpdate": true,
+    "editor.wordWrap": "on"
+}
