@@ -49,6 +49,7 @@ window-padding-y = 6
 window-padding-balance = true
 background-opacity = 1
 window-inherit-working-directory = false
+window-new-tab-position = end
 
 # ==================== 选择与复制 ====================
 # 选中即复制到系统剪贴板（对应 iTerm2 的 "Copy to pasteboard on selection"）
