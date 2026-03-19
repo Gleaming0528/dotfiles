@@ -56,7 +56,7 @@ window-new-tab-position = end
 copy-on-select = clipboard
 
 # ==================== 滚动配置 ====================
-scrollback-limit = 10000000
+scrollback-limit = 250000000
 mouse-scroll-multiplier = 3
 
 # ==================== Shell 集成 ====================
