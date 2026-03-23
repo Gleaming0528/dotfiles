@@ -11,5 +11,6 @@
     "remote.downloadExtensionsLocally": true,
     "explorer.confirmPasteNative": false,
     "go.toolsManagement.autoUpdate": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "terminal.integrated.fontFamily": "Maple Mono NF CN"
 }
