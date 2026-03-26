@@ -111,7 +111,7 @@ source <(argo completion zsh)
 export HOMEBREW_NO_INSTALL_UPGRADE=1
 
 # ==================== PATH ====================
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/.local/bin:$PATH"
 
 # ==================== 现代命令替代 ====================
 alias ls='eza --icons'
@@ -141,8 +141,11 @@ alias kx="kubectx"
 alias ku="kubectl"
 alias kproxy='bash ~/gitlab/hpc/.claude/skills/k8s-proxy-tunnel/kproxy.sh'
 alias cge-stop='ps aux | grep CGE | grep -v grep | awk '\''{print $2}'\'' | xargs sudo kill -STOP'
+alias claude='claude --dangerously-skip-permissions'
 alias dot='chezmoi'
 alias dotpush='chezmoi re-add && git -C ~/.local/share/chezmoi add -A && git -C ~/.local/share/chezmoi commit -m "update" && git -C ~/.local/share/chezmoi push'
 
 # ==================== Starship Prompt ====================
 eval "$(starship init zsh)"
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
