@@ -107,6 +107,9 @@ source <(kubectl completion zsh)
 source <(docker completion zsh)
 source <(argo completion zsh)
 
+# ==================== Homebrew ====================
+export HOMEBREW_NO_INSTALL_UPGRADE=1
+
 # ==================== PATH ====================
 export PATH="$HOME/.local/bin:$PATH"
 
