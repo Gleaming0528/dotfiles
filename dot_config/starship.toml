@@ -18,80 +18,87 @@ $cmd_duration\
 $line_break\
 $time$character"""
 
-# 时间放右侧，和左侧信息对称
 right_format = ""
 
 # ==================== 目录 ====================
 [directory]
 truncation_length = 3
 truncate_to_repo = true
-style = "bold #5fafff"
+style = "bold #0550ae"
 
 # ==================== Git 分支 ====================
 [git_branch]
 format = "on [$symbol$branch]($style) "
-style = "bold purple"
+style = "bold #6e40c9"
 
 # ==================== Git 状态 ====================
 [git_status]
 format = '([$all_status$ahead_behind]($style) )'
-style = "bold red"
+style = "bold #cf222e"
 
 # ==================== 隐藏版本号 ====================
 [golang]
 format = 'lsp [$symbol]($style)'
+style = "#00758f"
 
 [nodejs]
 format = 'lsp [$symbol]($style)'
+style = "#3c873a"
 
 [python]
 format = 'lsp [$symbol($virtualenv)]($style) '
+style = "#306998"
 detect_extensions = ['.py']
 detect_files = ['requirements.txt', 'pyproject.toml', 'setup.py', 'Pipfile', '__init__.py']
 detect_folders = []
 
 [rust]
 format = 'lsp [$symbol]($style)'
+style = "#a72145"
 
 [java]
 format = 'lsp [$symbol]($style)'
+style = "#b07219"
 
 [helm]
 format = 'lsp [$symbol]($style)'
+style = "#0f1689"
 
 # ==================== Conda 环境 ====================
 [conda]
 format = '[$symbol$environment]($style) '
-style = "bold green"
+style = "bold #1a7f37"
 ignore_base = false
 
 # ==================== Docker ====================
 [docker_context]
 format = "co [$symbol$context]($style) "
+style = "#1d63ed"
 only_with_files = true
 
 # ==================== Kubernetes ====================
 [kubernetes]
 disabled = false
-format = '[⎈ $context( \($namespace\))]($style) '
-style = "bold #87afff"
+format = '[☸ $context( \($namespace\))]($style) '
+symbol = "☸ "
+style = "bold #326ce5"
 
 # ==================== 命令耗时 ====================
 [cmd_duration]
 min_time = 3_000
 format = "took [$duration]($style) "
-style = "bold yellow"
+style = "bold #b45309"
 
-# ==================== 时间（crunch 风格：白色括号 + 黄色时间） ====================
+# ==================== 时间 ====================
 [time]
 disabled = false
 format = '[{](white)[$time](yellow)[}](white)'
 time_format = "%H:%M"
 
-# ==================== 输入符号（crunch 风格：白色箭头） ====================
+# ==================== 输入符号 ====================
 [character]
-success_symbol = "[ ➭](white)"
-error_symbol = "[ ➭](bold red)"
+success_symbol = "[ ➭](#6e40c9)"
+error_symbol = "[ ➭](bold #cf222e)"
 
 # ==================== 关掉不需要的模块 ====================
 [package]
