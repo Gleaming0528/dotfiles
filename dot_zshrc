@@ -144,6 +144,8 @@ alias cge-stop='ps aux | grep CGE | grep -v grep | awk '\''{print $2}'\'' | xarg
 alias claude='claude --dangerously-skip-permissions'
 alias dot='chezmoi'
 alias dotpush='chezmoi re-add && git -C ~/.local/share/chezmoi add -A && git -C ~/.local/share/chezmoi commit -m "update" && git -C ~/.local/share/chezmoi push'
+alias wgup='sudo /opt/homebrew/bin/bash $(which wg-quick) up wgclient'
+alias wgdown='sudo /opt/homebrew/bin/bash $(which wg-quick) down wgclient'
 
 # ==================== Starship Prompt ====================
 eval "$(starship init zsh)"
