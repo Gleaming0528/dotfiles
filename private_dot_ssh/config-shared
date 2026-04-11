@@ -1,0 +1,5 @@
+Host *
+    ServerAliveInterval 15
+    ServerAliveCountMax 6
+    TCPKeepAlive yes
+    IPQoS lowdelay throughput
