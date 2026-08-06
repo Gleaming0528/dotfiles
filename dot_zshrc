@@ -146,8 +146,11 @@ alias dot='chezmoi'
 alias dotpush='chezmoi re-add && git -C ~/.local/share/chezmoi add -A && git -C ~/.local/share/chezmoi commit -m "update" && git -C ~/.local/share/chezmoi push'
 alias wgup='wireproxy -c ~/.config/wireproxy/wgclient.conf -d'
 alias wgdown='pkill wireproxy'
+alias oc='opencode --auto'
+alias ocs='opencode session list'
 
 # ==================== Starship Prompt ====================
 eval "$(starship init zsh)"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

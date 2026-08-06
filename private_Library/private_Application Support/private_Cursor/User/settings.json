@@ -12,5 +12,9 @@
     "explorer.confirmPasteNative": false,
     "go.toolsManagement.autoUpdate": true,
     "editor.wordWrap": "on",
-    "terminal.integrated.fontFamily": "Maple Mono NF CN"
+    "terminal.integrated.fontFamily": "Maple Mono NF CN",
+    "window.autoDetectColorScheme": false,
+    "remote.SSH.remotePlatform": {
+        "ssh-hpc-prod-al-sh01.hellorobotaxi.top": "linux"
+    }
 }

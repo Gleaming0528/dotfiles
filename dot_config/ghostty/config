@@ -75,6 +75,11 @@ keybind = super+shift+d=new_split:down
 # Cmd+R 清屏（与 iTerm2 一致，发送 Ctrl+L，保留 scrollback）
 keybind = cmd+r=text:\x0c
 
+# ==================== 分屏显示 ====================
+# 未聚焦分屏轻微变暗（约 10% 遮罩），焦点一目了然；=1 则完全一致但无法区分
+# 该效果只作用于分屏，单窗口不受影响
+unfocused-split-opacity = 0.9
+
 # ==================== 铃声配置 ====================
 # iTerm2 启用了视觉铃声，这里用 border 闪烁替代
 bell-features = border,no-system,no-audio
